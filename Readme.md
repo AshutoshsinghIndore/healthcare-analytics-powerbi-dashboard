@@ -1,103 +1,89 @@
-# 🩺 PHC Healthcare Performance Dashboard – Power BI & Python ETL
+# 📊 PHC Pulse: Healthcare Performance Dashboard (Power BI + Python ETL)
 
-This end-to-end project analyzes healthcare activity across Primary Health Centers (PHCs) using **Power BI** and a custom-built **Python ETL pipeline**. It showcases how to transform raw public health data into meaningful insights for decision-makers in government or public health administration.
+> Transforming rural health data into real-world impact.
 
-> 📌 **Project Type**: Dashboard + ETL Pipeline  
-> 🚀 **Tools**: Power BI, Python (pandas, numpy), Parquet  
-> 📊 **Domain**: Healthcare Analytics / PHC Performance  
+[**🚀 Live Demo / Screenshots Below**]
 
 ---
 
-## 📌 Overview
-
-This project tracks and analyzes:
-- Patient registrations
-- Doctor consultations
-- Appointment behavior
-- PHC login/uptime patterns
-
-It is intended to help **district health officers, program managers, or state health departments** monitor PHC-level activity and optimize manpower and service delivery.
+## 🧠 Project Overview
+Primary Health Centers (PHCs) play a critical role in rural healthcare—but performance visibility is often fragmented.  
+**PHC Pulse** bridges that gap, offering an end-to-end analytics solution powered by **Power BI**, **Python ETL**, and **data-driven storytelling**.
 
 ---
 
-## 🧠 Features
-
-### ✅ Dashboard Insights
-- 📍 Top 10 Performing PHCs by consultation volume
-- 🧑‍⚕️ Doctor-wise consultations with specialization filters
-- 🕒 Time-based breakdown (by day, month, hour)
-- 📊 Gender- and age-group-wise registration analytics
-- 🧭 District/division-level healthcare summary
-- 🔍 Drill-throughs for PHC or doctor details
-
-### 🧹 Python ETL Pipeline
-- Modular scripts to clean each fact table:
-  - `Appointments`, `Consultations`, `Patient Registrations`, `PHC Logins`
-- Foreign key mapping for `Doctor`, `PHC`, and `Date` dimensions
-- Generates `.parquet` output for fast Power BI import
-- All preprocessing logic located in `/preprocessing/`
+## 🔥 Key Features
+- **Automated ETL**: Python (pandas, NumPy) cleanses and models raw data into a star schema.
+- **Efficient Storage**: Parquet format ensures fast, scalable dashboard loading.
+- **Interactive Power BI Visuals**:
+  - Top 10 PHCs by consultation volume  
+  - Doctor-level specialization filters  
+  - Gender/age segment trends  
+  - Time-based usage patterns & uptime tracking  
+  - Drill-through insights into PHC/doctor performance  
+  
+- **Custom DAX KPIs**:
+  - Consultation Count  
+  - Active Doctors  
+  - PHC Performance Rankings
 
 ---
 
-## 🗂️ Folder Structure
-## 🧪 ETL Pipeline
+## 🛠️ Tech Stack & Skills
+- **Power BI (Desktop & Service)** — Enterprise-grade visuals, drill-through, dashboard deployment  
+- **DAX** — Advanced metric design for deep insights  
+- **Python ETL** — Data transformation with pandas & NumPy  
+- **Data Modeling** — Star schema design for performance  
+- **Parquet** — High-speed data storage  
+- **Data Storytelling** — Translating analytics into actionable decisions  
+- **Performance Optimization** — Scalable pipelines for growing data  
+- **Governance** — Ready for real-world public health use
 
-The core logic is defined in `preprocess_main.py`.
+---
 
-### 🔁 Steps:
-1. Load raw Excel/CSV data from `01_DataSources/RAW`
-2. Clean each dataset via its own preprocessor module
-3. Generate:
-   - `Dim_Date`
-   - `Dim_Doctor`
-   - `Dim_PHC`
-4. Replace text with foreign keys (for star schema modeling)
-5. Save cleaned tables as `.parquet` in `Processed/`
+## 🎯 Impact & Use Cases
+| Stakeholder | Impact |
+|-------------|--------|
+| District Health Officers | Identify under/over-utilized PHCs & allocate manpower |
+| Program Managers | Track demographic trends & service efficiency |
+| Policy Makers | Make data-backed decisions at scale |
+| Public Health Analysts | Visualize and communicate insights effectively |
 
-### ▶️ Run Locally
-run Run Preprocessor.bat
+---
 
-📸 Dashboard Screenshots
-📊 Overview
-![Screenshot](02_Screenshots/healthcare-analytics-dashboard_Overview.jpg)
-🧑‍⚕️ Doctor Analytics
-![Screenshot](02_Screenshots/healthcare-analytics-dashboard_Dr-Analytics.jpg)
-🏥 PHC Analytics
-![Screenshot](02_Screenshots/healthcare-analytics-dashboard_PHC-Analytics.jpg)
+## 📸 Screenshots & Demo  
 
-🔍 Key Measures (DAX)
-Measure Name	Description
-Total Registrations	Count of patients registered
-Total Consultations	Valid consultations (duration > 2 min)
-Doctor Count Active	Distinct doctors providing service
-Consultations by Specialization	Count grouped by doctor specialty
-PHC Rank by Consultation	Ranking logic for high-performing PHCs
+![Dashboard Overview](02_Screenshots/healthcare-analytics-dashboard_Overview.jpg)
+![PHC Analytics](02_Screenshots/healthcare-analytics-dashboard_PHC-Analytics.jpg)  
+![Doctor Analytics](02_Screenshots/healthcare-analytics-dashboard_Dr-Analytics.jpg)  
+  
 
-📈 Visuals Used
-Clustered column charts
+---
 
-Table and multi-row cards
+## 🚀 Getting Started
 
-Matrix with row headers
+```bash
+# Clone the repo
+git clone https://github.com/AshutoshsinghIndore/healthcare-analytics-powerbi-dashboard.git
 
-Custom tooltip pages
+# Install dependencies
+pip install -r requirements.txt
 
-Drill-through on doctor and PHC
+# Run ETL
+python preprocess_main.py
 
-💼 Use Cases
-Monthly PHC performance reviews
+# Open Power BI file
+open health_dashboard.pbix
 
-Manpower planning at block/district level
 
-Identifying under-utilized or overburdened PHCs
 
-Program impact tracking across divisions
+🎯 Intended For
+Recruiters • Hiring Managers • HealthTech Consultants • Data Enthusiasts
 
-📃 License
-MIT License — feel free to use, extend, and improve.
+📎 License & Collaboration
+MIT Licensed — Feel free to adapt, extend, and build real-world health analytics solutions.
 
-🙋 About the Author
+📬 Get in Touch
 Ashutosh Singh
-Data Analyst | Power BI Consultant | Data Enthusiast
-
-📫 ashutoshsinghindore@gmail.com • www.linkedin.com/in/ashutoshsinghindore
+Data Analyst • Power BI Expert • Healthcare Analytics Enthusiast
+📩 ashutoshsinghindore@gmail.com | linkedin.com/in/ashutoshsinghindore
