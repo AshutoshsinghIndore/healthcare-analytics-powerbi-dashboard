@@ -31,10 +31,65 @@ This Healthcare Analytics Dashboard is a powerful, interactive Power BI solution
 
 ## 🧠 Technologies Used
 
-- **Power BI (Desktop)**
-- DAX (Data Analysis Expressions)
-- Power Query (ETL)
-- Custom visuals & slicers
+### 🧠 Data Preprocessing & ETL
+- **Python + Pandas**: Initial data shaping, type casting, date parsing, and KPI derivation
+- **Power Query (M Language)**: Data ingestion, table joins, column transformation, and conditional logic
+- **Excel / CSV**: Base data input from operational systems
+
+### 📐 Data Modeling
+- **Power BI Data Model**:
+  - Star schema with Fact and Dimension tables
+  - Relationships using keys: Doctor ID, PHC ID, Date, Specialization
+- **DAX (Data Analysis Expressions)**:
+  - Measures for Consultation %, Conversion Rate, Doctor Load, etc.
+
+### 📊 Visualization & UX
+- **Power BI Desktop**:
+  - Donut & Pie Charts, Line Graphs, Card KPIs, Stacked Bars
+  - Custom slicers: Date, Gender, Specialization, PHC, Doctor
+  - Conditional formatting, tooltip insights, drill-through filters
+
+---
+
+## 🔄 Data Pipeline Overview
+
+### 1. 🧼 Data Cleaning (Python + Power Query)
+- Standardized gender values (F/M/O → Female/Male/Others)
+- Converted `CallDuration` strings to numeric seconds
+- Filled nulls with defaults or removed invalid records
+- Merged tables: Registrations, Appointments, Consultations
+
+### 2. 🧮 Transformations
+- Derived fields:
+  - `AgeGroup`: Infant, Child, Teen, Adult, Senior
+  - `Appointment Status`: No-Show, Completed
+  - `Consultation Duration`, `Doctor Load`
+- Extracted `Year`, `Month`, `Week` from dates
+
+### 3. 🔗 Modeling
+- Linked:
+  - Doctors ↔ Consultations
+  - PHCs ↔ Appointments
+  - Dates ↔ All Fact Tables
+- Used **star schema** for query performance
+
+### 4. 📐 DAX Metrics
+- `Total Consultations`, `Appointments`, `Registrations`
+- `Conversion Rate` = Consultations ÷ Appointments
+- `Doctor Workload Score` via `RANKX`
+- `Gender-wise Consultations`, `Specialization Trends`
+
+---
+
+## 🎯 KPIs Tracked
+
+| Category          | Key Metrics                                 |
+|-------------------|---------------------------------------------|
+| **Appointments**  | Total Appointments, Conversion %, No-Shows  |
+| **Consultations** | Count, Avg Duration, Specialization Trends  |
+| **PHCs**          | Patient Load, Registration vs Consultation  |
+| **Doctors**       | Consultations, PHC Count, Case Conversion   |
+| **Demographics**  | Gender Split, Age Group Analysis            |
 
 ---
 
@@ -85,13 +140,9 @@ I'm a data professional passionate about using Power BI to transform raw data in
 ---
 
 ## 📸 Dashboard Previews
-### Overview <br>
-![Dashboard Overview](02_Screenshots/healthcare-analytics-dashboard_Overview.jpg)
-### PHC Analytics <br>
-![PHC Analytics](02_Screenshots/healthcare-analytics-dashboard_PHC-Analytics.jpg)  
-### Doctor Analytics <br>
-![Doctor Analytics](02_Screenshots/healthcare-analytics-dashboard_Dr-Analytics.jpg) 
-
+| Overview | PHC Insights | Doctor Insights |
+|----------|--------------|-----------------|
+| ![Dashboard Overview](02_Screenshots/healthcare-analytics-dashboard_Overview.jpg) | ![PHC Analytics](02_Screenshots/healthcare-analytics-dashboard_PHC-Analytics.jpg)   | ![Doctor Analytics](02_Screenshots/healthcare-analytics-dashboard_Dr-Analytics.jpg)  |
 
 ---
 
