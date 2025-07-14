@@ -85,12 +85,12 @@ I'm a data professional passionate about using Power BI to transform raw data in
 ---
 
 ## 📸 Dashboard Previews
-![Dashboard Overview](02_Screenshots/healthcare-analytics-dashboard_Overview.jpg)
 ### Overview <br>
-![PHC Analytics](02_Screenshots/healthcare-analytics-dashboard_PHC-Analytics.jpg)  
+![Dashboard Overview](02_Screenshots/healthcare-analytics-dashboard_Overview.jpg)
 ### PHC Analytics <br>
-![Doctor Analytics](02_Screenshots/healthcare-analytics-dashboard_Dr-Analytics.jpg) 
+![PHC Analytics](02_Screenshots/healthcare-analytics-dashboard_PHC-Analytics.jpg)  
 ### Doctor Analytics <br>
+![Doctor Analytics](02_Screenshots/healthcare-analytics-dashboard_Dr-Analytics.jpg) 
 
 
 ---
