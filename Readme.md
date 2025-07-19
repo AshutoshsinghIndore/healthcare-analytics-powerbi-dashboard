@@ -19,9 +19,9 @@ This Healthcare Analytics Dashboard is a powerful, interactive Power BI solution
 ## 📸 Dashboard Previews
 |  Page | Screenshot |
 |----------|--------------|
-| Overview |![Dashboard Overview](02_Screenshots/healthcare-analytics-dashboard_Overview.jpg) |
-| PHC Insights | ![PHC Analytics](02_Screenshots/healthcare-analytics-dashboard_PHC-Analytics.jpg)  |
-| Doctor Insights | ![Doctor Analytics](02_Screenshots/healthcare-analytics-dashboard_Dr-Analytics.jpg)  |
+| Overview |![Dashboard Overview](02_Screenshots/Overview.jpg) |
+| PHC Insights | ![PHC Analytics](02_Screenshots/PHCAnalytics.jpg)  |
+| Doctor Insights | ![Doctor Analytics](02_Screenshots/DrAnalytics.jpg)  |
 
 ---
 
